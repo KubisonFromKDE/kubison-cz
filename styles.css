@@ -1,0 +1,62 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* experimental*/
+
+.menu {
+     /* Obrázek v pozadí */
+    /* Zajistí, že obrázek bude pokrývat celou stránku */
+    padding: 20px; /* Odsazení tlačítek od okraje stránky */
+}
+
+.menu-item {
+    margin: 10px;
+    text-align: center;
+    background-color: darkblue;
+    background-size: cover;
+    /*border: 10px solid #ffffff;*/
+    border-radius: 40px;
+}
+
+.menu-item a {
+    display: block; /* Tlačítka budou zabírat celou šířku */
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 40px;
+}
+
+.menu-item a:hover {
+    background-color: #ffffff;
+    color: #1e1e1e;
+}
+
+
+#language-selection {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#webstatus-text {
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+}
