@@ -20,9 +20,9 @@ h1 {
 /* experimental*/
 
 .menu {
-     /* Obrázek v pozadí */
-    /* Zajistí, že obrázek bude pokrývat celou stránku */
-    padding: 20px; /* Odsazení tlačítek od okraje stránky */
+     /* Background image */
+    /* Ensures that the image covers the entire page */
+    padding: 20px; /* Offset buttons from the page edge */
 }
 
 .menu-item {
@@ -35,7 +35,7 @@ h1 {
 }
 
 .menu-item a {
-    display: block; /* Tlačítka budou zabírat celou šířku */
+    display: block; /* Buttons will take up the full width */
     text-decoration: none;
     color: #ffffff;
     font-size: 30px;

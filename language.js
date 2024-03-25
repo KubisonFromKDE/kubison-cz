@@ -9,27 +9,27 @@ const spotifyPlaylistsLink = document.getElementById('spotify-playlists-link');
 const languageSelectLabel = document.getElementById('language-select-label');
 const webstatusText = document.getElementById('webstatus-text');
 
-// Název webovky
+// Title website
 const pageTitle = document.title;
 
-// Funkce pro aktualizaci názvu webovky
+// Function to update the website title
 function updatePageTitle() {
     const selectedLanguage = languageSelect.value;
     const translation = translations[selectedLanguage];
     if (translation && translation.pageTitle) {
         document.title = translation.pageTitle;
-        console.log("Název webovky byl aktualizován na:", translation.pageTitle);
+        console.log("The website name has been updated to:", translation.pageTitle);
     } else {
-        console.log("Pøeklad pro název webovky nebyl nalezen.");
+        console.log("Translation not found for the website title.");
     }
 }
 
-// Naèítání pøekladù ze souboru dle vybraného jazyka
+// Loading translations from a language files
 function loadTranslations(lang) {
     fetch(`translations.${lang}.json`)
         .then(response => response.json())
         .then(data => {
-            translations[lang] = data; // Uložení pøekladù do promìnné translations pro daný jazyk
+            translations[lang] = data;
             projectsHeading.textContent = data.projects;
             soundboardLink.textContent = data.soundboard;
             gamesLink.textContent = data.games;
@@ -37,7 +37,7 @@ function loadTranslations(lang) {
             languageSelectLabel.textContent = data.languageSelectLabel;
             webstatusText.textContent = data.webstatusText;
             
-            updatePageTitle(); // Zde voláme funkci pro aktualizaci názvu webovky
+            updatePageTitle(); // Call function to update the website title
         });
 }
 
@@ -47,5 +47,5 @@ languageSelect.addEventListener('change', function () {
     loadTranslations(selectedLanguage);
 });
 
-// Defaultnì naètìte pøeklady pro angliètinu
+// Default loads English language
 loadTranslations('en');
